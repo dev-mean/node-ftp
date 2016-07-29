@@ -40,9 +40,9 @@ console.log(fileName);
 }		   
 				});
 		client.scp(fileName, {
-			    host: 'ftp.s6.exacttarget.com',
+			    host: 'ftp.s61.exacttarget.com',
 			    username: '6287911',
-			    password: 'T97*mb#SK1et',
+			    password: 'T97*mb#SK1etj',
 			    path: '/Import/'
 			}, function(err) {console.log('Error on adding file:', err);});
 });
@@ -58,9 +58,9 @@ console.log(fileName);
 				   }		   
 				});
 		client.scp(fileName, {
-			    host: 'ftp.s6.exacttarget.com',
+			    host: 'ftp.s61.exacttarget.com',
 			    username: '6287911',
-			    password: 'T97*mb#SK1et',
+			    password: 'T97*mb#SK1etj',
 			    path: '/Import/'
 			}, function(err) {console.log('Error on adding file:', err);});
   console.log('The answer to life, the universe, and everything!');
