@@ -16,6 +16,10 @@ app.post('/sub',function(req,res){
 		res.set('Content-Type', 'application/json');
 		res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
 		console.log(req.body);
+	if(req.body=={)
+		res.end('no');
+	else
+	{
 		//var data = 'EmailAddress,Marketing_Optin,SubscriberKey'+"\n";
 		data = req.body.Address+","+req.body.Marketing_Optin+","+req.body.SubscriberKey +"\n";
 			
@@ -24,6 +28,7 @@ app.post('/sub',function(req,res){
 		       return console.error(err);
 		   }		   
 		});
+	}
 });
 app.get('/send',function(req,res){
 		var now = new Date();
@@ -42,7 +47,7 @@ console.log(fileName);
 		client.scp(fileName, {
 			    host: 'ftp.s61.exacttarget.com',
 			    username: '6287911',
-			    password: 'T97*mb#SK1etj',
+			    password: 'T97*mb#SK1et',
 			    path: '/Import/'
 			}, function(err) {console.log('Error on adding file:', err);});
 });
@@ -60,7 +65,7 @@ console.log(fileName);
 		client.scp(fileName, {
 			    host: 'ftp.s61.exacttarget.com',
 			    username: '6287911',
-			    password: 'T97*mb#SK1etj',
+			    password: 'T97*mb#SK1et',
 			    path: '/Import/'
 			}, function(err) {console.log('Error on adding file:', err);});
   console.log('The answer to life, the universe, and everything!');
