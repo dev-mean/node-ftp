@@ -16,7 +16,7 @@ app.post('/sub',function(req,res){
 		res.set('Content-Type', 'application/json');
 		res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
 		console.log(req.body);
-	if(req.body=={)
+	if(req.body=={})
 		res.end('no');
 	else
 	{
