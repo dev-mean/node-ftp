@@ -27,7 +27,7 @@ app.post('/sub',function(req,res){
 });
 app.get('/send',function(req,res){
 		var now = new Date();
-		var fileName='Pinacolada2016_LiveTriggerFile.csv';///'Pinacolada2016_'+(now.getHours()>9?now.getHours():'0'+now.getHours())+(now.getMinutes()>9?now.getMinutes():'0'+now.getMinutes())+'_'+(now.getUTCDate()>9?now.getUTCDate():'0'+now.getUTCDate())+'072016.csv';
+		var fileName='hccw2016_LiveTriggerFile.csv';///'Pinacolada2016_'+(now.getHours()>9?now.getHours():'0'+now.getHours())+(now.getMinutes()>9?now.getMinutes():'0'+now.getMinutes())+'_'+(now.getUTCDate()>9?now.getUTCDate():'0'+now.getUTCDate())+'072016.csv';
 console.log(fileName);
 		fs.writeFileSync(fileName, fs.readFileSync('temp_data.csv'));
 		var title = 'EmailAddress,Marketing_Optin,SubscriberKey'+"\n";	
@@ -42,7 +42,7 @@ console.log(fileName);
 		client.scp(fileName, {
 			    host: 'ftp.s61.exacttarget.com',
 			    username: '6287911',
-			    password: 'T97*mb#SK1etj',
+			    password: 'T97*mb#SK1et',
 			    path: '/Import/'
 			}, function(err) {console.log('Error on adding file:', err);});
 });
@@ -60,7 +60,7 @@ console.log(fileName);
 		client.scp(fileName, {
 			    host: 'ftp.s61.exacttarget.com',
 			    username: '6287911',
-			    password: 'T97*mb#SK1etj',
+			    password: 'T97*mb#SK1et',
 			    path: '/Import/'
 			}, function(err) {console.log('Error on adding file:', err);});
   console.log('The answer to life, the universe, and everything!');
