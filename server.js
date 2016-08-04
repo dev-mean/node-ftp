@@ -17,7 +17,9 @@ app.post('/sub',function(req,res){
 		res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
 		console.log(req.body);
 	if(req.body=={})
+	{
 		res.end('no');
+	}
 	else
 	{
 		//var data = 'EmailAddress,Marketing_Optin,SubscriberKey'+"\n";
@@ -30,7 +32,6 @@ app.post('/sub',function(req,res){
 		   else
 		   {
 		   	res.end('done!!');
-		   }
 		   }
 		});
 	}
