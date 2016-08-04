@@ -26,7 +26,12 @@ app.post('/sub',function(req,res){
 		fs.appendFile('temp_data.csv', data,  function(err) {
 		   if (err) {
 		       return console.error(err);
-		   }		   
+		   }
+		   else
+		   {
+		   	res.end('done!!');
+		   }
+		   }
 		});
 	}
 });
