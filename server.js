@@ -60,7 +60,7 @@ console.log(fileName);
 
  setInterval(function(){ 
 	var now = new Date();
-		var fileName='Pinacolada2016_LiveTriggerFile.csv';//'Pinacolada2016_'+(now.getHours()>9?now.getHours():'0'+now.getHours())+(now.getMinutes()>9?now.getMinutes():'0'+now.getMinutes())+'_'+(now.getUTCDate()>9?now.getUTCDate():'0'+now.getUTCDate())+'072016.csv';
+		var fileName='hccw2016_LiveTriggerFile.csv';//'Pinacolada2016_'+(now.getHours()>9?now.getHours():'0'+now.getHours())+(now.getMinutes()>9?now.getMinutes():'0'+now.getMinutes())+'_'+(now.getUTCDate()>9?now.getUTCDate():'0'+now.getUTCDate())+'072016.csv';
 		fs.writeFileSync(fileName, fs.readFileSync('temp_data.csv'));
 		var title = 'EmailAddress,Marketing_Optin,SubscriberKey'+"\n";	
 		fs.writeFile('temp_data.csv', title,  function(err) {
