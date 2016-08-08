@@ -51,7 +51,7 @@ console.log(fileName);
 }		   
 				});
 		client.scp(fileName, {
-			    host: 'ftp.s61.exacttarget.com',
+			    host: 'ftp.s6.exacttarget.com',
 			    username: '6287911',
 			    password: 'T97*mb#SK1et',
 			    path: '/Import/'
@@ -69,7 +69,7 @@ console.log(fileName);
 				   }		   
 				});
 		client.scp(fileName, {
-			    host: 'ftp.s61.exacttarget.com',
+			    host: 'ftp.s6.exacttarget.com',
 			    username: '6287911',
 			    password: 'T97*mb#SK1et',
 			    path: '/Import/'
