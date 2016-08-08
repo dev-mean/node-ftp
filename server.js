@@ -23,7 +23,7 @@ app.post('/sub',function(req,res){
 	else
 	{
 		//var data = 'EmailAddress,Marketing_Optin,SubscriberKey'+"\n";
-		data = req.body.Address+","+req.body.Marketing_Optin==0?'N':'Y'+","+req.body.SubscriberKey +"\n";
+		data = req.body.Address+","+req.body.Marketing_Optin+","+req.body.SubscriberKey +"\n";
 			
 		fs.appendFile('temp_data.csv', data,  function(err) {
 		   if (err) {
