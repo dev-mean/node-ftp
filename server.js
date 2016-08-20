@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 var client = require('scp2');
 var fs = require("fs");	
-var title = 'EmailAddress,Marketing_Optin,SubscriberKey'+"\n";	
+var title = 'EmailAddress,Marketing_Optin,SubscriberKey';	
 fs.writeFile('temp_data.csv', title,  function(err) {
 		   if (err) {
 		       return console.error(err);
@@ -23,7 +23,7 @@ app.post('/sub',function(req,res){
 	else
 	{
 		//var data = 'EmailAddress,Marketing_Optin,SubscriberKey'+"\n";
-		data = req.body.Address+","+req.body.Marketing_Optin+","+req.body.SubscriberKey +"\n";
+		data ="\n" + req.body.Address+","+req.body.Marketing_Optin+","+req.body.SubscriberKey;
 			
 		fs.appendFile('temp_data.csv', data,  function(err) {
 		   if (err) {
@@ -41,7 +41,7 @@ app.get('/send',function(req,res){
 		var fileName='hccw2016_LiveTriggerFile.csv';///'Pinacolada2016_'+(now.getHours()>9?now.getHours():'0'+now.getHours())+(now.getMinutes()>9?now.getMinutes():'0'+now.getMinutes())+'_'+(now.getUTCDate()>9?now.getUTCDate():'0'+now.getUTCDate())+'072016.csv';
 console.log(fileName);
 		fs.writeFileSync(fileName, fs.readFileSync('temp_data.csv'));
-		var title = 'EmailAddress,Marketing_Optin,SubscriberKey'+"\n";	
+		var title = 'EmailAddress,Marketing_Optin,SubscriberKey';	
 		fs.writeFile('temp_data.csv', title,  function(err) {
 				   if (err) {
 				       return console.error(err);
